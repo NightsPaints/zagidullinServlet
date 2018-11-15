@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>                                                                          <!-- Пролог: указываем версию XML и кодировку XML документа -->
+<!-- pom.xml - это основной файл, который описывает проект. Вообще могут быть дополнительные файлы, но они играют второстепенную роль -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">    <!-- Корневй элемент и заголовок. <project> - это схема которая облегчает
+                                                                                                                редактирование и проверку POM. Так же это открытие тэга "project" -->
+    <modelVersion>4.0.0</modelVersion>                                                                          <!-- Модель Maven, в Maven 2 и 3 присутствует версия 4.0.0.
+                                                                                                                Для Maven 2 это единственная поддерживамая версия POM -->
+
+    <groupId>su.usatu.www</groupId>                                                                             <!-- Наименование организации или подразделения -->
+    <artifactId>multipleRBP108mZagidullin</artifactId>                                                          <!-- Название проекта -->
+    <version>1.0-SNAPSHOT</version>                                                                             <!-- Версия проекта. SNAPSHOT – это специальная версия,
+                                                                                                                которая показывает текущую рабочую копию -->
+    <packaging>war</packaging>                                                                                  <!-- Добовляем тэг "packaging" со значением "war"
+                                                                                                                для обозначения этого проекта как web-проекта -->
+
+    <dependencies>                                                                                              <!-- Зависимости: открытие тэга -->
+        <dependency>                                                                                            <!-- Зависимость: открытие тэга -->
+            <groupId>javax.servlet</groupId>                                                                    <!-- Указываем что будет использоваться зависимость от Maven -->
+            <artifactId>javax.servlet-api</artifactId>                                                          <!-- Для API Servlet 4.0.1 - последняя версия -->
+            <version>4.0.1</version>                                                                            <!-- Сайт: https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api/4.0.1 -->
+        </dependency>                                                                                           <!-- Зависимость: зыкрытие тэга -->
+    </dependencies>                                                                                             <!-- Зависимости: закрытие тэга -->
+
+    <!-- "Build" в нашем случае нужен для Deploying проекта на Heroky -->
+    <build>                                                                                                     <!-- Дополнительная информация: открытие тэга -->
+        <plugins>                                                                                               <!-- Подключаемые модули: открытие тэга -->
+            <plugin>                                                                                            <!-- Модуль: открытие тэга -->
+                <groupId>com.heroku.sdk</groupId>                                                               <!-- Разработчик плагина -->
+                <artifactId>heroku-maven-plugin</artifactId>                                                    <!-- Название плагина -->
+                <version>2.0.6</version>                                                                        <!-- Версия плагина. Сайт: https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin -->
+            </plugin>                                                                                           <!-- Модуль: закрытие тэга -->
+        </plugins>                                                                                              <!-- Подключаемые модули: зыкрытие тэга -->
+    </build>                                                                                                    <!-- Дополнительная информация: зыкрытие тэга -->
+
+</project>                                                                                                      <!-- Закрытие тэга "project" -->
