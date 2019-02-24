@@ -11,7 +11,6 @@ import java.math.BigDecimal;
 /**
  * Объявляем класс Servlet наследующийся от HttpServlet и переопределяющий два него два метода:
  * doGet(HttpServletRequest req, HttpServletResponse resp)
- * doPost(HttpServletRequest req, HttpServletResponse resp)
  **/
 public class Servlet extends HttpServlet {
 
