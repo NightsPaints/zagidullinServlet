@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 /**
  * Объявляем класс Servlet наследующийся от HttpServlet и переопределяющий два него два метода:
  * doGet(HttpServletRequest req, HttpServletResponse resp)
- * doPost(HttpServletRequest req, HttpServletResponse resp)
+ * новая строка
  **/
 public class Servlet extends HttpServlet {
 
@@ -61,7 +61,7 @@ public class Servlet extends HttpServlet {
         req.setAttribute("result", result.toString().replace(".", ","));                           /** Кладем в объект-запрос атрибут результата и присваиваем атрбуту значение, попутно заменяем "." на ",",
                                                                                                                              в кратце (отправляем результат на форму для вывода) **/
 
-        req.getRequestDispatcher("myPage.jsp").forward(req, resp);                                                   // Загрузка страницы myPage.jsp
+        req.getRequestDispatcher("myPage.jsp").forward(req, resp);
     }
 
 }
